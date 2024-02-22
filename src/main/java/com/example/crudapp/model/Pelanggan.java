@@ -15,13 +15,17 @@ public class Pelanggan {
     @Column(name = "alamat")
     private String alamat;
 
+    @Column(name = "no_telp")
+    private String noTelp;
+
     public Pelanggan() {
     }
 
-    public Pelanggan(Long idPelanggan, String namaPelanggan, String alamat) {
+    public Pelanggan(Long idPelanggan, String namaPelanggan, String alamat, String noTelp) {
         this.idPelanggan = idPelanggan;
         this.namaPelanggan = namaPelanggan;
         this.alamat = alamat;
+        this.noTelp = noTelp;
     }
 
     public Long getIdPelanggan() {
@@ -48,12 +52,21 @@ public class Pelanggan {
         this.alamat = alamat;
     }
 
+    public String getNoTelp() {
+        return noTelp;
+    }
+
+    public void setNoTelp(String noTelp) {
+        this.noTelp = noTelp;
+    }
+
     @Override
     public String toString() {
         return "Pelanggan{" +
                 "idPelanggan=" + idPelanggan +
                 ", namaPelanggan='" + namaPelanggan + '\'' +
                 ", alamat='" + alamat + '\'' +
+                ", noTelp='" + noTelp + '\'' +
                 '}';
     }
 }
